@@ -60,6 +60,22 @@ body{
     justify-content: space-around;
 }
 
+.categories p{
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: solid blueviolet 1px;
+}
+
+.categories p:hover{
+    transition: 2s;
+    background-color: transparent;
+    color: blueviolet;
+    border: solid blueviolet 1px;
+}
+
 .mylearning{
     position: relative;
     cursor: pointer;
@@ -79,12 +95,7 @@ body{
 .mylearning:hover .mylearning__popup{
     display: block;
 }
-.categories p{
-    background-color: blueviolet;
-    color: white;
-    padding: 10px;
-    border-radius: 30px;
-}
+
 
 .sale-image{
     position: relative;
@@ -102,6 +113,22 @@ body{
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .recommended{
@@ -123,7 +150,7 @@ body{
 }
 
 .course-card img{
-    width: 100%;
+    width: 80%;
     height: 50%;
 }
 
